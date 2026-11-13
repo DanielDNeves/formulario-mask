@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="form">
+
+                <button id="btn-tema" class="theme-toggle">
+                    ☀️ Tema claro
+                </button>
+
+                <div class="form-header">
+                    <h2>Cadastro</h2>
+                    <p>Preencha seus dados abaixo</p>
+                </div>
+
+                <div class="line-1">
+                    <div>
+                        <h5>Nome</h5>
+                        <input id="nome" class="input" type="text">
+                    </div>
+                    <div>
+                        <h5>Endereço</h5>
+                        <input id="endereco" class="input" type="text">
+                    </div>
+                </div>
+
+                <div class="line-2">
+                    <div>
+                        <h5>CEP</h5>
+                        <input class="input" id="cep" type="text" oninput=mascara_cep() maxlength="9">
+                    </div>
+                    <div>
+                        <h5>CPF</h5>
+                        <input class="input" id="cpf" type="text" oninput=mascara_cpf() maxlength="14">
+                    </div>
+                </div>
+
+                <div class="line-3">
+                    <div>
+                        <h5>Telefone</h5>
+                        <input class="input" id="tel" type="text" oninput=mascara_telefone() maxlength="17">
+                    </div>
+                    <div>
+                        <h5>CNPJ</h5>
+                        <input class="input" id="cnpj" type="text" oninput=mascara_cnpj() maxlength="18">
+                    </div>
+                </div>
+
+                <button id="enviar" class="btn">
+                    ENVIAR FORMULÁRIO
+                </button>
+
+                <dialog>
+                    <div class="modal">
+                        <div class="modal-cont">
+                            <h2>Enviado com sucesso</h2>
+                            <h5>Seus dados foram salvos.</h5>
+                            <button class="btn-modal">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </dialog>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
