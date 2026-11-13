@@ -155,3 +155,20 @@ enviar.addEventListener('click', function(){
 
 nome.value = localStorage.getItem("nome")
 endereco.value = localStorage.getItem("endereco")
+
+
+
+
+//MODAL
+
+const formbtn = document.getElementById("enviar");
+const fechar = document.getElementById("btn-fechar");
+const modal = document.getElementById("modal") 
+
+formbtn.addEventListener('click', () => {
+modal.showModal()
+})
+
+fechar.addEventListener('click', () =>{
+  modal.close();
+})
